@@ -1,0 +1,134 @@
+html {
+    scroll-behavior: smooth;
+  }
+  
+  :root {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 62.5%;
+  }
+  
+  body {
+    background: radial-gradient(circle, #afb6c6, #f2f2f2);
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-around;
+    padding: 2rem;
+    font-size: 1.6rem;
+    align-items: center;
+  }
+  
+  .navbar > a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: 2.25rem;
+  
+    transition: transform 0.3s ease;
+  }
+  
+  .navbar > a:hover {
+    transform: scale(1.1);
+  }
+  
+  .navbar > input {
+    padding: 0.6rem;
+    padding-left: 1.5rem;
+    padding-right: 8rem;
+    border-radius: 1.25rem;
+    border: black solid 2px;
+  
+    transition: padding-right 0.3s ease;
+    transform-origin: center;
+  }
+  
+  .navbar > input:focus {
+    padding-right: 25rem;
+    outline: none; 
+  }
+  
+  .navbar > .cart-icon {
+    transition: transform 0.3s ease;
+  }
+  
+  .navbar > .cart-icon:hover { 
+    cursor: pointer;
+    transform: scale(1.1);
+  }
+
+  .cart-popup {
+    position: fixed;
+    top: 0;
+    right: -35rem;
+    width: 35rem;
+    height: 100%;
+    background: white;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    z-index: 1000;
+    padding: 1rem;
+    font-size: 1.7rem;
+
+    transition: right 0.3s ease;
+  }
+
+  .cart-popup.open {
+    right: 0;
+  }
+  
+  .cart-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 1rem;
+  }
+  
+  .cart-items {
+    flex: 1;
+    overflow-y: auto;
+    padding: 1rem;
+  }
+  
+  .close-btn {
+    background: rgba(0, 0, 0, 0.2);
+    border: none;
+    cursor: pointer;
+    border-radius: 1rem;
+    padding: 0.75rem;
+    font-weight: bold;
+  }
+
+  .cart-item {
+    display: flex;
+    background: rgb(190, 190, 190);
+    border-radius: 2rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    padding: 1rem;
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .cart-item-image {
+    width: 7rem;
+  }
+
+  .cart-item-details {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .cart-item-details > button {
+    border-radius: 1rem;
+    background-color: lightcoral;
+    border: none;
+    padding: 0.25rem;
+  }
+
+  .cart-item-details > button:hover {
+    cursor: pointer;
+    opacity: 0.75;
+  }
