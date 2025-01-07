@@ -1,0 +1,47 @@
+.item-details-container {
+    display: flex;
+    padding: 5rem;
+    gap: 10rem;
+  }
+  
+  .item-details-container img {
+    max-width: 35rem;
+    height: auto;
+    border-radius: 2rem;
+  }
+  
+  .item-details-container h1 {
+    font-size: 3.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  .item-details-container p {
+    font-size: 1.8rem;
+    margin: 0.5rem 0;
+    text-align: start;
+  }
+
+.item-details-container button {
+    font-size: 1.8rem;
+    padding: 0.75rem;
+    border-radius: 1rem;
+    border: black 2px solid;
+    border: none;
+    background-color: lightgreen;
+    width: 100%;
+    margin-top: 3rem;
+}
+
+.item-details-container button:hover {
+    cursor: pointer;
+    background-color: rgb(107, 201, 107);
+  }
+
+  .indicator-text {
+    font-size: 1.8rem;
+    text-align: center;
+    margin-top: 10rem;
+  }
+
+
+  

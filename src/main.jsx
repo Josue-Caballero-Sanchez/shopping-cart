@@ -5,6 +5,7 @@ import { CartProvider } from './CartContext';
 import './index.css'
 import App from "./HomePage"
 import MensClothing from './MensClothingPage';
+import ItemDetails from './ItemDetails';
 
 const router = createBrowserRouter([
   {
@@ -14,6 +15,10 @@ const router = createBrowserRouter([
   {
     path: "mensClothing",
     element: <MensClothing />,
+  },
+  {
+    path: "item/:id", 
+    element: <ItemDetails />,
   },
 ]);
 

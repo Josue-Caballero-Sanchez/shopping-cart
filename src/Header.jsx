@@ -12,6 +12,8 @@ const Header = () => {
     setIsCartOpen((prev) => !prev);
   };
 
+  const totalPrice = cart.reduce((acc, item) => acc + item.price, 0).toFixed(2);
+
   return (
     <header>
         <nav className="navbar">
@@ -49,6 +51,11 @@ const Header = () => {
                         <p>Your cart is empty.</p>
                     )}
                 </div>
+                {cart.length > 0 && (
+                    <div className="cart-total">
+                        <h4>Total: ${totalPrice}</h4>
+                    </div>
+                )}
         </div>
     </header>
   );

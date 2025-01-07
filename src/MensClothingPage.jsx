@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { useCart } from './CartContext';
 import "./MensClothing.css";
 import Header from './Header';
+import { Link } from "react-router-dom";
 
 const getProductData = () => {
     const [data, setData] = useState(null);
@@ -43,18 +44,24 @@ const MensClothing = () => {
             {!loading && !error && (
                 <>
                 {data.map((item) => (
-                    <div key={item.id} className="item-container">
-                        <img src={item.image} alt={item.title + "image"} />
+                      
+                    <Link className="item-container" to={`/item/${item.id}`} key={item.id}>  
+                        <img src={item.image} alt={`${item.title} image`} />
                         <h3>{item.title}</h3>
                         <p>Rating: {item.rating.rate}</p>
                         <p>${item.price}</p>
                         <button
-                            onClick={() => handleAddToCartClick(item)}
+                            onClick={(e) => {
+                                e.preventDefault(); 
+                                e.stopPropagation();
+                                handleAddToCartClick(item);
+                            }}
                             disabled={isItemInCart(item)}
                             >
                             {isItemInCart(item) ? "✔ Added" : "Add to cart +"}
                         </button>
-                    </div>
+                    </Link>
+                   
                 ))}
                 </>
             )}
