@@ -19,7 +19,7 @@ html {
     align-items: center;
   }
   
-  .navbar > a {
+  .navbar > .brand-link {
     text-decoration: none;
     color: black;
     font-weight: bold;
@@ -32,7 +32,7 @@ html {
     transform: scale(1.1);
   }
   
-  .navbar > input {
+  .navbar input {
     padding: 0.6rem;
     padding-left: 1.5rem;
     padding-right: 8rem;
@@ -43,7 +43,7 @@ html {
     transform-origin: center;
   }
   
-  .navbar > input:focus {
+  .navbar input:focus {
     padding-right: 25rem;
     outline: none; 
   }
@@ -132,4 +132,48 @@ html {
   .cart-item-details > button:hover {
     cursor: pointer;
     opacity: 0.75;
+  }
+
+  .search-container {
+    position: relative;
+  }
+  
+  .search-results {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 1rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    max-height: 20rem;
+    overflow-y: auto;
+  }
+  
+  .search-result-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.5rem;
+    text-decoration: none;
+    color: black;
+    font-size: 1.4rem;
+  }
+  
+  .search-result-item img {
+    width: 3rem;
+    height: 3rem;
+    object-fit: contain;
+  }
+  
+  .search-result-item:hover {
+    background-color: #f2f2f2;
+    cursor: pointer;
+  }
+
+  .search-state-text {
+    text-align: center;
+    padding: 1rem;
   }
