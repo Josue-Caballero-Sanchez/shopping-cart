@@ -1,6 +1,5 @@
 {
   "name": "shopping-cart",
-  "homepage": "https://josue-caballero-sanchez.github.io/shopping-cart/",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -8,10 +7,7 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
-
+    "preview": "vite preview"
   },
   "dependencies": {
     "@mdi/js": "^7.4.47",
