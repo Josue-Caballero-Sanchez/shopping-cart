@@ -41,13 +41,9 @@ function App() {
             <h2>Categories</h2>
             <Link className="button" to="mensClothing">Men's Clothing</Link>
             <Link className="button" to="womensClothing">Women's Clothing</Link>
-            <Link className="button" to="jewelry">Jewelery</Link>
-            <a href="#" className="button">
-              Electronics
-            </a>
-            <a href="#" className="button">
-              All Products
-            </a>
+            <Link className="button" to="jewelery">Jewelery</Link>
+            <Link className="button" to="electronics">Electronics</Link>
+            <Link className="button" to="allProducts">AllProducts</Link>
         </div>
       </div>
     </>
